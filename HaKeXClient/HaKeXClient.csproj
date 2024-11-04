@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<UseWindowsForms>true</UseWindowsForms>
+	 
+	  <AssemblyName>svchost</AssemblyName> <!-- Keep this as svchost -->
+    <RootNamespace>svchost</RootNamespace>
+    <PackageId>svchost</PackageId>
+    
+    <Product>Système d'exploitation Microsoft® Windows®</Product> <!-- Update as necessary -->
+    <Version>10.0.19041.4355</Version>
+    <Company>© Microsoft Corporation</Company> <!-- Update as necessary -->
+    <Title>svchost</Title> <!-- This can be the same as AssemblyName -->
+    <Description>Processus hôte pour les services Windows</Description> <!-- Change as necessary -->
+    <Copyright>© Microsoft Corporation. Tous droits réservés.</Copyright>
+    
+    <!-- Additional attributes -->
+    <FileVersion>10.0.19041.4355</FileVersion>
+    <AssemblyVersion>10.0.19041.4355</AssemblyVersion>
+    
+    <!-- New attributes -->
+    <AssemblyConfiguration>Release</AssemblyConfiguration> <!-- Configuration mode -->
+    <AssemblyCulture>neutral</AssemblyCulture> <!-- Culture info -->
+    <AssemblyTrademark>© Microsoft Corporation</AssemblyTrademark> <!-- Trademark -->
+    <AssemblyFileVersion>10.0.19041.4355</AssemblyFileVersion> <!-- File version -->
+    <AssemblyInformationalVersion>10.0.19041.4355 (WinBuild.160101.0800)</AssemblyInformationalVersion> <!-- Informational version -->
+    <ComVisible>false</ComVisible> <!-- Not visible to COM components -->
+    <Guid>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</Guid> <!-- Unique identifier (replace with actual GUID) -->
+    <SecurityPermissionAttribute>None</SecurityPermissionAttribute> <!-- Security permission -->
+    
+  </PropertyGroup>
+
+</Project>

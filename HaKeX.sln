@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaKeXClient", "HaKeXClient\HaKeXClient.csproj", "{621F02A8-00FA-4381-B611-70F585C9A6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaKeXServer", "HaKeXServer\HaKeXServer.csproj", "{9FC45398-83EB-4A56-B64F-F47B15792855}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{621F02A8-00FA-4381-B611-70F585C9A6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621F02A8-00FA-4381-B611-70F585C9A6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621F02A8-00FA-4381-B611-70F585C9A6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621F02A8-00FA-4381-B611-70F585C9A6BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FC45398-83EB-4A56-B64F-F47B15792855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FC45398-83EB-4A56-B64F-F47B15792855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FC45398-83EB-4A56-B64F-F47B15792855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FC45398-83EB-4A56-B64F-F47B15792855}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EF24E17-7593-4B0F-A5B5-F85BF3ED4911}
+	EndGlobalSection
+EndGlobal
