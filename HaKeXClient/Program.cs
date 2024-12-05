@@ -6,8 +6,8 @@ namespace HaKeXClient
     {
         static async Task Main(string[] args)
         {
-            string serverIP = "192.168.11.103";
-            int serverPort = 5000;
+            string serverIP = "192.168.11.121";
+            int serverPort = 1243;
 
             TcpClientHaKeX client = new TcpClientHaKeX(serverIP, serverPort);
 

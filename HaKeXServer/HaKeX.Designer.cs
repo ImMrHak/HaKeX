@@ -35,6 +35,7 @@
             btnStartTcpServer = new Button();
             groupBox2 = new GroupBox();
             pictureArea = new PictureBox();
+            btnITC = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureArea).BeginInit();
@@ -43,6 +44,7 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Controls.Add(btnITC);
             groupBox1.Controls.Add(txtServerPort);
             groupBox1.Controls.Add(txtServerHost);
             groupBox1.Controls.Add(btnStopTcpServer);
@@ -113,6 +115,16 @@
             pictureArea.TabIndex = 0;
             pictureArea.TabStop = false;
             // 
+            // btnITC
+            // 
+            btnITC.Location = new Point(317, 22);
+            btnITC.Name = "btnITC";
+            btnITC.Size = new Size(434, 40);
+            btnITC.TabIndex = 4;
+            btnITC.Text = "Image To Text To ClipBoard";
+            btnITC.UseVisualStyleBackColor = true;
+            btnITC.Click += btnITC_Click;
+            // 
             // HaKeX
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -139,5 +151,6 @@
         private Button btnStopTcpServer;
         private Button btnStartTcpServer;
         private PictureBox pictureArea;
+        private Button btnITC;
     }
 }

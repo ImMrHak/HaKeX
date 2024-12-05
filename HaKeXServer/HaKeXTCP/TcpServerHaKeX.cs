@@ -23,7 +23,7 @@ namespace HaKeXServer.HaKeXTCP
         // Method to start the server and continuously receive images
         public void StartServerAndReceiveImages(Action<Bitmap> onImageReceived)
         {
-            _listener = new TcpListener(IPAddress.Parse(_host), _port);
+            _listener = new TcpListener(IPAddress.Any, _port);
             _listener.Start();
             Console.WriteLine($"Server started on {_host}:{_port} and waiting for connections...");
 

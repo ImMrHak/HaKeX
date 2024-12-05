@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Threading;
 using System.Windows.Forms;
+using Tesseract;
 
 namespace HaKeXServer
 {
@@ -64,6 +65,54 @@ namespace HaKeXServer
         private void btnStopTcpServer_Click(object sender, EventArgs e)
         {
             _server.StopServer();
+        }
+
+        private void btnITC_Click(object sender, EventArgs e)
+        {
+            if (pictureArea.Image == null)
+            {
+                MessageBox.Show("No image to process.");
+                return;
+            }
+
+            // Perform OCR on the image in pictureArea
+            try
+            {
+                string tessDataPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tessdata");
+
+                using (var engine = new TesseractEngine(tessDataPath, "eng", EngineMode.Default))
+                {
+                    using (var ms = new MemoryStream())
+                    {
+                        // Save the pictureArea image to a memory stream
+                        pictureArea.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                        ms.Seek(0, SeekOrigin.Begin);
+
+                        using (var img = Pix.LoadFromMemory(ms.ToArray()))
+                        {
+                            using (var page = engine.Process(img))
+                            {
+                                string text = page.GetText();
+
+                                if (!string.IsNullOrWhiteSpace(text))
+                                {
+                                    // Copy the extracted text to the clipboard
+                                    Clipboard.SetText(text);
+                                    MessageBox.Show("Text copied to clipboard!");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No text found in the image.");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error during OCR: {ex.Message}");
+            }
         }
     }
 }
